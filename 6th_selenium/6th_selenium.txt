@@ -1,0 +1,25 @@
+static web 
+-웹 페이지에 request를 보냈을 때 완성된 html을 보내줌
+-수정이 적은 웹 페이지, 기업 소개 페이지 
+-장: 처리가 빠름, 로딩시간이 짧다
+dynamic web
+-사용자와의 상호작용을 통해 완성시키는 웹페이지
+-네이버 광고 페이지 -> 사용자마다 다르게 보임
+-request와 response받는 것을 첫번째 request에서는 html을 가지고 개괄적인 부분을 받고 다시 사용자 정보를 갖고 다시 reqeust ,response받아서 웹피이지 최종 완성 
+-reques.get()url함수를 이용해서는 웹페이지에 보이는걸 모두 갖고 오지 못했음
+->find all function사용 값이 안나오는 경우 있었는데 이런것들은 dynamic web 사용했기 때문 
+
+그래서 selenium 사용 -> 다양한 웹 브라우저 사용할 수 있도록,,,해주는 모듈 
+
+python -m venv venv
+pip install --upgrade pip
+pip install bs4
+pip install requests
+pip install selenium
+venv₩Scripts₩activate.bat
+
+from selenium import webdriver # web페이지에 있는 정보 받아오기 
+from bs4 import BeautifulSoup
+import os  # 파이썬 내장 모듈 
+import time # 파이썬 내장 모듈 
+
